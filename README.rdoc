@@ -1,0 +1,51 @@
+== Welcome to easy_weather
+
+easy_weather is a plugin for jQuery that enables web developers to add a simple weather box in their websites.
+
+easy_weather is not a geolocation solution, you must provide latitude, longitude city and country to it, for geolocation you will need a server side solution or a different plugin that can give you this information, please read the following:
+
+- http://freegeoip.appspot.com/
+- http://javascript.about.com/library/blip.htm
+
+
+== Getting Started
+
+1. Download easy_weather
+2. Add easy_weather and jQuery to your document
+3. Enjoy!
+
+== How to use
+
+To use easy_weather just add a div from which you'll call the plugin
+
+=== Markup
+
+  <div id="easy_weather"></div>
+  
+=== JavaScript
+
+You only need to call easy_weather from the selector of your choice
+
+  $(document).ready(function() {
+    $("#easy_weather").easy_weather();
+  });
+  
+== Customize
+
+easy weather defaults to Tijuana, Mexico locations so if you are there you probably won't be reading this section, otherwise easy_weather supports 4 paramenters:
+
+  latitude   // User's location latitude
+  longitude  // User's location longitude
+  country    // User's country name
+  city       // User's city name
+  
+  
+In case you need to be specific about the user's location just send the parameters valus in that order, heres the Tokyo example:
+
+  $("#content").easy_weather( 35.685, 139.751, 'Japan', 'Tokyo' );
+
+Examples are added to the project repository under the example directory take a look at them.
+
+== Important
+
+easy_weather uses geonames webservice to get the weather and google weather images under the hood please implement some sort of page caching to avoid flooding their network.

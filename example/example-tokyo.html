@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>easy_weather Tokyo Example</title>
+  </head>
+  <body>
+    <div id="easy_weather_widget" ></div>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>
+    <script type="text/javascript" src="../easy_weather.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#easy_weather_widget").easy_weather( 35.685, 139.751, 'Japan', 'Tokyo' );
+      });
+    </script>
+  </body>
+</html>
